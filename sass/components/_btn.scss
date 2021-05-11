@@ -10,11 +10,27 @@
 }
 
 .btn-sub {
-  display: inline-block;
-  background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  -webkit-background-clip: text;
-  font-size: 1.6rem;
-  border-bottom: 1px solid $color-primary;
-  padding: 0rem;
-  color: transparent;
+  &:link,
+  &:visited {
+    display: inline-block;
+    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    font-size: 1.6rem;
+    border-bottom: 1px solid $color-primary;
+    padding: .3rem 1rem;
+    color: transparent;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    color:rgb(255, 255, 255);
+    transform: translateY(-.3rem);
+    box-shadow: 0 .3rem .5rem rgba(black, .3);
+  }
+
+  &:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .1rem .3rem rgba(black, .3);
+  }
 }
