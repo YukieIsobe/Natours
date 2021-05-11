@@ -1,0 +1,22 @@
+.heading-h2 {
+  display: inline-block;
+  background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.heading-h3 {
+  margin-bottom: 1.3rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+  font-size: 1.6rem;
+}
+
