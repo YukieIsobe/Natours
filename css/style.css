@@ -89,7 +89,6 @@ body {
       margin-right: 6rem; }
   .row .cal-1-of-3 {
     width: calc((100% - (6rem)*2) / 3);
-    background: orangered;
     float: left; }
     .row .cal-1-of-3:not(:last-child) {
       margin-right: 6rem; }
@@ -111,7 +110,6 @@ body {
       margin-right: 6rem; }
   .row .cal-3-of-4 {
     width: calc(((100% - 6rem*3)/4)*3 + (6rem*2));
-    background: orangered;
     float: right; }
     .row .cal-3-of-4:not(:last-child) {
       margin-right: 6rem; }
@@ -225,6 +223,29 @@ body {
   .feature-box:hover {
     transform: translateY(-1rem) scale(1.03); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    height: 50rem;
+    width: 100%;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; }
+    .card__side--front {
+      background: orangered; }
+    .card__side--back {
+      background: green;
+      transform: rotateY(-180deg); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -268,10 +289,15 @@ body {
 
 .section-feature {
   margin-top: -10vh;
-  padding: 20rem 0;
+  padding-top: 20rem;
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg); }
   .section-feature > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  margin-top: -10vh;
+  background: #f7f7f7;
+  padding: 25rem 0 50rem 0; }
