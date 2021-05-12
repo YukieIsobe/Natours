@@ -12,13 +12,23 @@
       top: 0;
       left: 0;
       backface-visibility: hidden;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(black, .15);
 
       &--front {
-        background: orangered;
+        background: white;
       }
       &--back {
-        background: green;
         transform: rotateY(-180deg);
+        &-1 {
+          background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        }
+        &-2 {
+          background: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        }
+        &-3 {
+          background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        }
       }
   }
 
