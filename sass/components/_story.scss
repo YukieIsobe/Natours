@@ -9,6 +9,9 @@
   font-size: 1.6rem;
   transform: skew(-15deg);
   opacity: .8;
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+  }
 
   &__shape {
     height: 15rem;

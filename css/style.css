@@ -329,6 +329,8 @@ body {
   font-size: 1.6rem;
   transform: skew(-15deg);
   opacity: .8; }
+  .story:not(:last-child) {
+    margin-bottom: 6rem; }
   .story__shape {
     height: 15rem;
     width: 15rem;
