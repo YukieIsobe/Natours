@@ -4,6 +4,9 @@
 .u-margin-bottom-big {
   margin-bottom: 5rem; }
 
+.u-margin-bottom-midium {
+  margin-bottom: 2rem; }
+
 *,
 *::after,
 *::before {
@@ -382,6 +385,9 @@ body {
     object-fit: cover;
     overflow: hidden; }
 
+.form__btn-submit {
+  display: inline-block; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -441,3 +447,19 @@ body {
 .section-story {
   padding: 15rem 0;
   position: relative; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: cover;
+  width: 80%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  .book__form {
+    width: 50%;
+    padding: 2rem; }
