@@ -157,14 +157,24 @@ body {
   opacity: 1; }
 
 .navigation__item {
-  padding: 2.5rem 0; }
+  margin: 1rem; }
 
-.navigation__link {
+.navigation__link:link, .navigation__link:visited {
   text-decoration: none;
   font-size: 3rem;
   font-weight: 300;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 1rem;
+  background-image: linear-gradient(105deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 213%;
+  transition: background-position .5s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 1.5rem; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: right;
+  color: #55c57a; }
 
 .btn-main, .btn-main:link, .btn-main:visited {
   display: inline-block;
