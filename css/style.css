@@ -148,7 +148,10 @@ body {
   width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 101; }
+  z-index: 101;
+  opacity: 0;
+  width: 0;
+  transition: all .3s .3s; }
 
 .navigation__list {
   list-style: none;
@@ -157,9 +160,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all .3s .2s;
-  text-align: center;
-  opacity: 0;
-  width: 0; }
+  text-align: center; }
 
 .navigation__item {
   margin: 1rem; }
@@ -184,7 +185,7 @@ body {
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(70); }
 
-.navigation__checkbox:checked ~ .navigation__nav .navigation__list {
+.navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
 
