@@ -15,10 +15,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgb(255, 255, 255);
-    // padding: 3rem;
     box-shadow: 0 2rem 4rem rgba(black, .3);
     border-radius: 3px;
     display: table;
+    overflow: hidden;
   }
 
   &__left {
@@ -30,7 +30,7 @@
     width: 65%;
     display: table-cell;
     vertical-align: middle;
-    padding: 0rem 5rem;
+    padding: 3rem 5rem;
   }
 
   &__image {
@@ -39,7 +39,19 @@
   }
 
   &__text {
+    font-size: 1.4rem;
 
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+    -moz-column-rule: 1px solid $color-grey-middle;
+    column-rule: 1px solid $color-grey-middle;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
 
