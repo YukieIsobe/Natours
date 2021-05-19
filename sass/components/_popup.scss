@@ -6,6 +6,8 @@
   left: 0;
   background: rgba(black,.8);
   z-index: 200;
+  visibility: hidden;
+  opacity: 0;
 
   &__container {
     width: 75vw;
@@ -13,12 +15,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.7);
     background: rgb(255, 255, 255);
     box-shadow: 0 2rem 4rem rgba(black, .3);
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    transition: all .3s;
   }
 
   &__left {
@@ -53,5 +56,24 @@
     -webkit-hyphens: auto;
     hyphens: auto;
   }
-}
 
+  &__close {
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 0rem;
+      right: 2rem;
+      text-decoration: none;
+      font-size: 3rem;
+      color: $color-grey-dark;
+    }
+  }
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  &:target &__container {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
