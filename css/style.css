@@ -473,6 +473,33 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media only screen and (max-width: 900px) {
+    .card {
+      position: relative;
+      height: auto; }
+      .card__side {
+        height: 50rem;
+        width: 100%;
+        position: relative;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+        .card__side--front {
+          background: white;
+          padding-bottom: 5rem; }
+        .card__side--back {
+          transform: rotateY(0);
+          height: 25rem;
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+          margin-top: -5rem; }
+      .card:hover .card__side--front {
+        transform: rotateY(0deg); }
+      .card__cta {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0);
+        width: 100%; }
+      .card__price-box {
+        padding: 3.5rem 0 1rem 0; } }
 
 .story {
   width: 75%;

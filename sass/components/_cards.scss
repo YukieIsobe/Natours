@@ -119,4 +119,46 @@
     font-size: 6rem;
     font-weight: 100;
   }
+
+
+
+  /////////////////////////////////////////////////////////
+  @include respond(tab-port) {
+  position: relative;
+  height: auto;
+
+  &__side {
+      height: 50rem;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 1.5rem 4rem rgba(black, .15);
+        &--front {
+          background: white;
+          padding-bottom: 5rem;
+        }
+        &--back {
+          transform: rotateY(0);
+          height: 25rem;
+          clip-path: polygon(0 10%,100% 0, 100% 100%, 0 100%);
+          margin-top: -5rem;
+        }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    //back side styling
+    &__cta {
+      position: relative;
+      // position: absolute;
+      top: 0%;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+    }
+    &__price-box {
+      padding: 3.5rem 0 1rem 0;
+    }
+  }
 }

@@ -19,7 +19,6 @@
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
-    // padding-top: 1rem;
   }
   &:hover {
     transform: translateY(-1rem) scale(1.03);
