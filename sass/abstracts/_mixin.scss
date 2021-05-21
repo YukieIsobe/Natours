@@ -5,3 +5,25 @@
     clear: both;
   }
 }
+
+/*
+phone: 600px
+tab-port: 900px
+desktop: 1200px
+
+// 1em = 16px
+37.5em = 600px  (600/16)
+56.25em = 900px
+75em = 1200px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content };
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) { @content };
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 75em) { @content };
+  }
+}
