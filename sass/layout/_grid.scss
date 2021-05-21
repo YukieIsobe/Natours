@@ -6,58 +6,38 @@
   }
   @include clearfix;
 
-  .cal-1-of-2 {
-    width: calc((100% - #{$gutter-horizontal}) / 2);
+  @include respond(tab-port) {
+    max-width: 50rem;
+  }
+  @include respond(phone) {
+    max-width: 35rem;
+  }
+
+  [class^="cal-"] {
     float: left;
-    
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
     }
+    @include respond(tab-port) {
+      width: 100% !important;
+    }
+  }
+
+  .cal-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
   }
 
   .cal-1-of-3 {
     width: calc((100% - (#{$gutter-horizontal})*2) / 3);
-    float: left;
-    
-    &:not(:last-child) {
-      margin-right: $gutter-horizontal;
-    }
-  }
-
-  .cal-2-of-3 {
-    width: calc(((100% - #{$gutter-horizontal}*2)/3)*2 + #{$gutter-horizontal});
-    background: orangered;
-    float: right;
-    
-    &:not(:last-child) {
-      margin-right: $gutter-horizontal;
-    }
   }
 
   .cal-1-of-4 {
     width: calc(((100% - #{$gutter-horizontal}*3)/4));
-    float: left;
-    
-    &:not(:last-child) {
-      margin-right: $gutter-horizontal;
-    }
-  }
-  .cal-2-of-4 {
-    width: calc(((100% - #{$gutter-horizontal}*3)/4)*2 + #{$gutter-horizontal});
-    float: right;
-    
-    &:not(:last-child) {
-      margin-right: $gutter-horizontal;
-    }
-  }
-
-  .cal-3-of-4 {
-    width: calc(((100% - #{$gutter-horizontal}*3)/4)*3 + (#{$gutter-horizontal}*2));
-    float: right;
-    
-    &:not(:last-child) {
-      margin-right: $gutter-horizontal;
-    }
   }
 }
 

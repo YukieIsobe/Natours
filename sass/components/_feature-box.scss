@@ -7,6 +7,11 @@
   box-shadow: 0 1.5rem 4rem rgba(black, .15);
   transition: all .3s;
   min-height: 35rem;
+
+  @include respond(tab-port) {
+    min-height: 25rem;
+  }
+
   &__icon {
     display: inline-block;
     font-size: 6rem;
