@@ -15,11 +15,7 @@
     }
   }
   &__logo {
-    width: 18rem;
-
-    @include respond(tab-port) {
-      width: 13rem;
-    }
+    width: 15rem;
   }
 
   &__navigation {
