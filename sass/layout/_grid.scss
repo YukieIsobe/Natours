@@ -3,7 +3,7 @@
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
-    @include respond(phone) {
+    @include respond(tab-port) {
       margin-bottom: 4rem;
     }
   }
@@ -13,7 +13,7 @@
     max-width: 60rem;
   }
   @include respond(phone) {
-    max-width: 35rem;
+    max-width: 90%;
   }
 
   [class^="cal-"] {

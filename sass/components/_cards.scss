@@ -63,10 +63,11 @@
     font-weight: 300;
     color: white;
     position: absolute;
-    top: 25%;
+    top: 30%;
     right: 2rem;
     width: 75%;
     text-align: right;
+    // @include respond(phone) {}
   }
   &__heading-span {
     padding: 1rem 1.5rem;
@@ -138,10 +139,21 @@
         }
         &--back {
           transform: rotateY(0);
-          height: 20rem;
+          height: 23rem;
+          @include respond(phone) {
+            height: 20rem;
+          }
           clip-path: polygon(0 10%,100% 0, 100% 100%, 0 100%);
           margin-top: -5rem;
         }
+    }
+
+    &__heading {
+      top: 35%;
+      @include respond(phone) {
+        width: 55%;
+        top: 25%;
+      }
     }
 
     &:hover &__side--front {
