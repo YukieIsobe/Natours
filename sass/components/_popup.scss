@@ -4,10 +4,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(black,.8);
   z-index: 200;
   visibility: hidden;
   opacity: 0;
+
+  
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(black,.3);
 
   &__container {
     width: 75vw;
