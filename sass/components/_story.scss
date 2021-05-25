@@ -5,11 +5,18 @@
   background: rgba(white, .6);
   border-radius: 3px;
   padding: 6rem;
-  padding-left: 9rem;
+  // padding-left: 9rem;
   font-size: 1.6rem;
   transform: skew(-15deg);
   &:not(:last-child) {
     margin-bottom: 6rem;
+  }
+  @include respond(tab-port) {
+    transform: skew(0deg);
+    padding: 4rem;
+  }
+  @include respond(phone) {
+    padding: 1.5rem;
   }
 
   &__shape {
@@ -21,7 +28,20 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skew(13deg);
+
+    @include respond(tab-port) {
+      transform: translateX(-2rem) skew(0deg);
+    }
+    @include respond(phone) {
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      transform: translateX(0rem) skew(0deg);
+      height: 11rem;
+      width: 11.5rem;
+    }
   }
+
   &__image {
     height: 120%;
     position: absolute;
@@ -31,6 +51,10 @@
     filter: contrast(130%);
     transition: all .5s;
     backface-visibility: hidden;
+    @include respond(phone) {
+      filter: blur(4px) brightness(80%);
+      height: 100%;
+    }
   }
   &__name {
     text-transform: uppercase;
@@ -43,11 +67,18 @@
     transform: translate(-50%, 20%);
     transition: all .5s;
     opacity: 0;
+    @include respond(phone) {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__text {
     transform: skew(15deg);
 
+    @include respond(tab-port) {
+      transform: skew(0deg);
+    }
   }
 
   &:hover &__name {

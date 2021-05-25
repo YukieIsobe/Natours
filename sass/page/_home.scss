@@ -39,6 +39,15 @@
 .section-story {
   padding: 15rem 0;
   position: relative;
+
+  & > .row {
+    @include respond(tab-port) {
+      max-width: 90rem;
+    }
+    @include respond(phone) {
+      max-width: 95rem;
+    }
+  }
 }
 
 .section-book {

@@ -7,7 +7,7 @@
   @include clearfix;
 
   @include respond(tab-port) {
-    max-width: 50rem;
+    max-width: 60rem;
   }
   @include respond(phone) {
     max-width: 35rem;

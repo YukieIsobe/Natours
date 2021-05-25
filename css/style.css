@@ -103,7 +103,7 @@ body {
     clear: both; }
   @media only screen and (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 60rem; } }
   @media only screen and (max-width: 37.5em) {
     .row {
       max-width: 35rem; } }
@@ -507,11 +507,17 @@ body {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem;
-  padding-left: 9rem;
   font-size: 1.6rem;
   transform: skew(-15deg); }
   .story:not(:last-child) {
     margin-bottom: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .story {
+      transform: skew(0deg);
+      padding: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .story {
+      padding: 1.5rem; } }
   .story__shape {
     height: 15rem;
     width: 15.5rem;
@@ -521,6 +527,17 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skew(13deg); }
+    @media only screen and (max-width: 56.25em) {
+      .story__shape {
+        transform: translateX(-2rem) skew(0deg); } }
+    @media only screen and (max-width: 37.5em) {
+      .story__shape {
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        transform: translateX(0rem) skew(0deg);
+        height: 11rem;
+        width: 11.5rem; } }
   .story__image {
     height: 120%;
     position: absolute;
@@ -530,6 +547,10 @@ body {
     filter: contrast(130%);
     transition: all .5s;
     backface-visibility: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .story__image {
+        filter: blur(4px) brightness(80%);
+        height: 100%; } }
   .story__name {
     text-transform: uppercase;
     color: white;
@@ -541,8 +562,15 @@ body {
     transform: translate(-50%, 20%);
     transition: all .5s;
     opacity: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .story__name {
+        opacity: 1;
+        transform: translate(-50%, -50%); } }
   .story__text {
     transform: skew(15deg); }
+    @media only screen and (max-width: 56.25em) {
+      .story__text {
+        transform: skew(0deg); } }
   .story:hover .story__name {
     transform: translate(-50%, -50%);
     opacity: 1; }
@@ -822,6 +850,12 @@ body {
 .section-story {
   padding: 15rem 0;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .section-story > .row {
+      max-width: 90rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-story > .row {
+      max-width: 95rem; } }
 
 .section-book {
   padding: 15rem 0;
